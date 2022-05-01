@@ -178,5 +178,48 @@ namespace MathQuiz
                 answerBox.Select(0, lengthOfAnswer);
             }
         }
+
+        
+
+        private void check_sum_field(object sender, EventArgs e)
+        {
+            // Check if the user typed the correct answer...
+            if (addend1 + addend2 == sum.Value)
+            {
+                // Play a sound if they did
+                System.Media.SystemSounds.Beep.Play();
+            }
+            
+        }
+
+        private void check_division_field(object sender, EventArgs e)
+        {
+            // Check if the user typed the correct answer...
+            if (dividend / divisor == quotient.Value)
+            {
+                // Play a sound if they did
+                System.Media.SystemSounds.Beep.Play();
+            }
+        }
+
+        private void check_subtraction_field(object sender, EventArgs e)
+        {
+            // Check if the user typed the correct answer...
+            if (minuend - subtrahend == difference.Value)
+            {
+                // Play a sound if they did
+                System.Media.SystemSounds.Beep.Play();
+            }
+        }
+
+        private void check_multiplication_field(object sender, EventArgs e)
+        {
+            // Check if the user typed the correct answer...
+            if (multiplicand * multiplier == product.Value)
+            {
+                // Play a sound if they did
+                System.Media.SystemSounds.Beep.Play();
+            }
+        }
     }
 }
