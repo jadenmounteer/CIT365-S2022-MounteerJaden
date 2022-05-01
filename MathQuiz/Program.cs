@@ -1,4 +1,4 @@
-namespace MathQuix
+namespace MathQuiz
 {
     internal static class Program
     {
