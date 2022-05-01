@@ -102,6 +102,7 @@ namespace MathQuiz
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void timeLabel_Click(object sender, EventArgs e)
@@ -220,6 +221,23 @@ namespace MathQuiz
                 // Play a sound if they did
                 System.Media.SystemSounds.Beep.Play();
             }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Today;
+
+            this.time_lbl.Text = today.ToString("dd MMMM yyyy");
+        }
+
+        private void time_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
