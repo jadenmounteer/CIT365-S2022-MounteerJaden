@@ -1,4 +1,4 @@
-namespace MathQuiz
+namespace MathQuix
 {
     public partial class Form1 : Form
     {
