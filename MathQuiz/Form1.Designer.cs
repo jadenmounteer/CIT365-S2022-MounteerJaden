@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timeLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.plusLeftLabel = new System.Windows.Forms.Label();
@@ -64,8 +65,10 @@
             // 
             // timeLabel
             // 
+            this.timeLabel.BackColor = System.Drawing.Color.ForestGreen;
             this.timeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.timeLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.timeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.timeLabel.Location = new System.Drawing.Point(281, 9);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(200, 30);
@@ -130,6 +133,7 @@
             // 
             // sum
             // 
+            this.sum.BackColor = System.Drawing.Color.LightGray;
             this.sum.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sum.Location = new System.Drawing.Point(227, 73);
             this.sum.Name = "sum";
@@ -140,6 +144,7 @@
             // 
             // difference
             // 
+            this.difference.BackColor = System.Drawing.Color.LightGray;
             this.difference.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.difference.Location = new System.Drawing.Point(227, 134);
             this.difference.Name = "difference";
@@ -194,6 +199,7 @@
             // 
             // product
             // 
+            this.product.BackColor = System.Drawing.Color.LightGray;
             this.product.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.product.Location = new System.Drawing.Point(227, 191);
             this.product.Name = "product";
@@ -248,6 +254,7 @@
             // 
             // quotient
             // 
+            this.quotient.BackColor = System.Drawing.Color.LightGray;
             this.quotient.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.quotient.Location = new System.Drawing.Point(227, 240);
             this.quotient.Name = "quotient";
@@ -303,13 +310,15 @@
             // startButton
             // 
             this.startButton.AutoSize = true;
+            this.startButton.BackColor = System.Drawing.Color.Black;
             this.startButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.startButton.ForeColor = System.Drawing.Color.Transparent;
             this.startButton.Location = new System.Drawing.Point(143, 302);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(133, 35);
             this.startButton.TabIndex = 0;
             this.startButton.Text = "Start the quiz";
-            this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.UseVisualStyleBackColor = false;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // timer1
@@ -346,6 +355,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(484, 361);
             this.Controls.Add(this.time_lbl);
             this.Controls.Add(this.dateLabel);
@@ -372,7 +382,9 @@
             this.Controls.Add(this.plusLeftLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.timeLabel);
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Jaden Mounteer Math Quiz";
