@@ -310,7 +310,7 @@
             // startButton
             // 
             this.startButton.AutoSize = true;
-            this.startButton.BackColor = System.Drawing.Color.Black;
+            this.startButton.BackColor = System.Drawing.Color.ForestGreen;
             this.startButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.startButton.ForeColor = System.Drawing.Color.Transparent;
             this.startButton.Location = new System.Drawing.Point(143, 302);
