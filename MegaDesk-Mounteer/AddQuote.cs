@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace MegaDesk_Mounteer
 {
@@ -32,6 +33,11 @@ namespace MegaDesk_Mounteer
             viewQuote.Tag = this;
             viewQuote.Show(this);
             this.Hide();
+        }
+
+        private void DeskWidthField_TextChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }

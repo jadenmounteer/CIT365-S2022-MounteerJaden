@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MainMenuButton = new System.Windows.Forms.Button();
             this.ViewQuoteButton = new System.Windows.Forms.Button();
             this.CustomerNameField = new System.Windows.Forms.TextBox();
@@ -42,6 +43,8 @@
             this.RushOrderSelectionField = new System.Windows.Forms.TextBox();
             this.InchesLabel1 = new System.Windows.Forms.Label();
             this.InchesLabel2 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // MainMenuButton
@@ -135,6 +138,7 @@
             this.DeskWidthField.Name = "DeskWidthField";
             this.DeskWidthField.Size = new System.Drawing.Size(72, 23);
             this.DeskWidthField.TabIndex = 1;
+            this.DeskWidthField.TextChanged += new System.EventHandler(this.DeskWidthField_TextChanged);
             // 
             // DeskDepthField
             // 
@@ -177,6 +181,10 @@
             this.InchesLabel2.TabIndex = 17;
             this.InchesLabel2.Text = "inches";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -199,6 +207,7 @@
             this.Name = "AddQuote";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Quote";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,5 +229,6 @@
         private TextBox RushOrderSelectionField;
         private Label InchesLabel1;
         private Label InchesLabel2;
+        private ErrorProvider errorProvider1;
     }
 }
