@@ -149,6 +149,7 @@
             this.DeskDepthField.Name = "DeskDepthField";
             this.DeskDepthField.Size = new System.Drawing.Size(72, 23);
             this.DeskDepthField.TabIndex = 2;
+            this.DeskDepthField.TextChanged += new System.EventHandler(this.DeskDepthField_TextChanged);
             // 
             // InchesLabel1
             // 

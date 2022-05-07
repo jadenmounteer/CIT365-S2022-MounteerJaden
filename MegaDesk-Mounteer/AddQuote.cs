@@ -36,6 +36,13 @@ namespace MegaDesk_Mounteer
                 this.errorProvider1.SetError(DeskWidthField, errorMsg);
                 return;
             }
+
+            // Validate the depth
+            if (!isValidDepth(DeskDepthField.Text))
+            {
+                this.errorProvider1.SetError(DeskDepthField, "Please enter a number between 12 and 48");
+                return;
+            } 
         
             // TODO pass data from one for to the other
 
@@ -81,9 +88,9 @@ namespace MegaDesk_Mounteer
 
             // Check if correct range
             int numWidth = Int32.Parse(text);
-            if (numWidth > 96 || numWidth < 24)
+            if (numWidth > 94 || numWidth < 24)
             {
-                errorMessage = "Please enter a number between 24 and 96";
+                errorMessage = "Please enter a number between 24 and 94";
                 return false;
             }
 
@@ -97,5 +104,56 @@ namespace MegaDesk_Mounteer
             // If all conditions have been met, clear the ErrorProvider of errors.
             errorProvider1.SetError(DeskWidthField, "");
         }
+
+        private void DeskDepthField_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                // Check if valid character
+                if (!isValidDepth(DeskDepthField.Text))
+                {
+                    // If not, throw an exeption
+                    throw new Exception();
+                }
+                
+            }
+            catch (Exception)
+            {
+                this.errorProvider1.SetError(DeskDepthField, "Please enter a number between 12 and 48");
+            }
+        }
+
+        private bool isValidDepth(string text)
+        {
+            // Check if blank
+            if (text.Length == 0)
+            {
+                return false;
+            }
+
+            // Check if alphanumeric
+            foreach (char c in text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+
+            // Check if correct range
+            int numWidth = Int32.Parse(text);
+            if (numWidth > 48 || numWidth < 12)
+            {
+                return false;
+            }
+
+
+            // It is valid...
+            this.errorProvider1.SetError(DeskDepthField, "");
+            return true;
+        }
+
+
+
     }
 }
