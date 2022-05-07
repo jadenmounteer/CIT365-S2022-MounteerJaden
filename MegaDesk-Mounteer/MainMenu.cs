@@ -6,5 +6,10 @@ namespace MegaDesk_Mounteer
         {
             InitializeComponent();
         }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
