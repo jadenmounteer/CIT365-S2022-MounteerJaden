@@ -39,11 +39,13 @@
             this.RushOrderLabel = new System.Windows.Forms.Label();
             this.DeskWidthField = new System.Windows.Forms.TextBox();
             this.DeskDepthField = new System.Windows.Forms.TextBox();
-            this.NumOfDrawersField = new System.Windows.Forms.TextBox();
-            this.RushOrderSelectionField = new System.Windows.Forms.TextBox();
             this.InchesLabel1 = new System.Windows.Forms.Label();
             this.InchesLabel2 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.SurfaceMaterialLabel = new System.Windows.Forms.Label();
+            this.NumOfDrawersBox = new System.Windows.Forms.ComboBox();
+            this.SurfaceMaterialBox = new System.Windows.Forms.ComboBox();
+            this.RushOrderBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,7 +128,7 @@
             // 
             this.RushOrderLabel.AutoSize = true;
             this.RushOrderLabel.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.RushOrderLabel.Location = new System.Drawing.Point(12, 172);
+            this.RushOrderLabel.Location = new System.Drawing.Point(12, 224);
             this.RushOrderLabel.Name = "RushOrderLabel";
             this.RushOrderLabel.Size = new System.Drawing.Size(192, 24);
             this.RushOrderLabel.TabIndex = 11;
@@ -138,7 +140,8 @@
             this.DeskWidthField.Name = "DeskWidthField";
             this.DeskWidthField.Size = new System.Drawing.Size(72, 23);
             this.DeskWidthField.TabIndex = 1;
-            this.DeskWidthField.TextChanged += new System.EventHandler(this.DeskWidthField_TextChanged);
+            this.DeskWidthField.Validating += new System.ComponentModel.CancelEventHandler(this.DeskWidthField_Validating);
+            this.DeskWidthField.Validated += new System.EventHandler(this.DeskWidthField_Validated);
             // 
             // DeskDepthField
             // 
@@ -146,20 +149,6 @@
             this.DeskDepthField.Name = "DeskDepthField";
             this.DeskDepthField.Size = new System.Drawing.Size(72, 23);
             this.DeskDepthField.TabIndex = 2;
-            // 
-            // NumOfDrawersField
-            // 
-            this.NumOfDrawersField.Location = new System.Drawing.Point(199, 139);
-            this.NumOfDrawersField.Name = "NumOfDrawersField";
-            this.NumOfDrawersField.Size = new System.Drawing.Size(141, 23);
-            this.NumOfDrawersField.TabIndex = 3;
-            // 
-            // RushOrderSelectionField
-            // 
-            this.RushOrderSelectionField.Location = new System.Drawing.Point(210, 173);
-            this.RushOrderSelectionField.Name = "RushOrderSelectionField";
-            this.RushOrderSelectionField.Size = new System.Drawing.Size(79, 23);
-            this.RushOrderSelectionField.TabIndex = 4;
             // 
             // InchesLabel1
             // 
@@ -183,17 +172,54 @@
             // 
             // errorProvider1
             // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
+            // 
+            // SurfaceMaterialLabel
+            // 
+            this.SurfaceMaterialLabel.AutoSize = true;
+            this.SurfaceMaterialLabel.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SurfaceMaterialLabel.Location = new System.Drawing.Point(12, 176);
+            this.SurfaceMaterialLabel.Name = "SurfaceMaterialLabel";
+            this.SurfaceMaterialLabel.Size = new System.Drawing.Size(228, 24);
+            this.SurfaceMaterialLabel.TabIndex = 18;
+            this.SurfaceMaterialLabel.Text = "Desktop Surface Material:";
+            // 
+            // NumOfDrawersBox
+            // 
+            this.NumOfDrawersBox.FormattingEnabled = true;
+            this.NumOfDrawersBox.Location = new System.Drawing.Point(199, 139);
+            this.NumOfDrawersBox.Name = "NumOfDrawersBox";
+            this.NumOfDrawersBox.Size = new System.Drawing.Size(121, 23);
+            this.NumOfDrawersBox.TabIndex = 19;
+            // 
+            // SurfaceMaterialBox
+            // 
+            this.SurfaceMaterialBox.FormattingEnabled = true;
+            this.SurfaceMaterialBox.Location = new System.Drawing.Point(246, 180);
+            this.SurfaceMaterialBox.Name = "SurfaceMaterialBox";
+            this.SurfaceMaterialBox.Size = new System.Drawing.Size(121, 23);
+            this.SurfaceMaterialBox.TabIndex = 20;
+            // 
+            // RushOrderBox
+            // 
+            this.RushOrderBox.FormattingEnabled = true;
+            this.RushOrderBox.Location = new System.Drawing.Point(210, 225);
+            this.RushOrderBox.Name = "RushOrderBox";
+            this.RushOrderBox.Size = new System.Drawing.Size(121, 23);
+            this.RushOrderBox.TabIndex = 21;
             // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(515, 441);
+            this.Controls.Add(this.RushOrderBox);
+            this.Controls.Add(this.SurfaceMaterialBox);
+            this.Controls.Add(this.NumOfDrawersBox);
+            this.Controls.Add(this.SurfaceMaterialLabel);
             this.Controls.Add(this.InchesLabel2);
             this.Controls.Add(this.InchesLabel1);
-            this.Controls.Add(this.RushOrderSelectionField);
-            this.Controls.Add(this.NumOfDrawersField);
             this.Controls.Add(this.DeskDepthField);
             this.Controls.Add(this.DeskWidthField);
             this.Controls.Add(this.RushOrderLabel);
@@ -225,10 +251,12 @@
         private Label RushOrderLabel;
         private TextBox DeskWidthField;
         private TextBox DeskDepthField;
-        private TextBox NumOfDrawersField;
-        private TextBox RushOrderSelectionField;
         private Label InchesLabel1;
         private Label InchesLabel2;
         private ErrorProvider errorProvider1;
+        private ComboBox SurfaceMaterialBox;
+        private ComboBox NumOfDrawersBox;
+        private Label SurfaceMaterialLabel;
+        private ComboBox RushOrderBox;
     }
 }
