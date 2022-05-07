@@ -22,8 +22,6 @@ namespace MegaDesk_Mounteer
         private double width;
         private double depth;
         private int numberOfDrawers;
-
-        // TODO Include desktop surface material here as type enum
         private DesktopMaterial desktopMaterial;
 
         // Properties
@@ -31,10 +29,18 @@ namespace MegaDesk_Mounteer
         public double Depth { get { return depth; } set { depth = value; } }
         public int NumberOfDrawers { get { return numberOfDrawers; } set { numberOfDrawers = value; } }
 
+        // Constraints
+        const double MAX_WIDTH = 94;
+        const double MIN_WIDTH = 24;
+        const double MAX_DEPTH = 48;
+        const double MIN_DEPTH = 12;
+
         // Constructor
-        public Desk()
+        public Desk(double width, double depth, int numberOfDrawers) 
         {
-            
+            this.Width = width;
+            this.Depth = depth;
+            this.NumberOfDrawers = numberOfDrawers;
         }
 
     }
