@@ -62,6 +62,7 @@
             this.ViewQuotesButton.TabIndex = 1;
             this.ViewQuotesButton.Text = "&View Quotes";
             this.ViewQuotesButton.UseVisualStyleBackColor = false;
+            this.ViewQuotesButton.Click += new System.EventHandler(this.ViewQuotesButton_Click);
             // 
             // SearchQuotesButton
             // 
@@ -75,6 +76,7 @@
             this.SearchQuotesButton.TabIndex = 2;
             this.SearchQuotesButton.Text = "&Search Quotes";
             this.SearchQuotesButton.UseVisualStyleBackColor = false;
+            this.SearchQuotesButton.Click += new System.EventHandler(this.SearchQuotesButton_Click);
             // 
             // ExitButton
             // 

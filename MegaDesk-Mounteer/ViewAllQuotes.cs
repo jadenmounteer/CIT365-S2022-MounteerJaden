@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MegaDesk_Mounteer
 {
-    public partial class AddQuote : Form
+    public partial class ViewAllQuotes : Form
     {
-        public AddQuote()
+        public ViewAllQuotes()
         {
             InitializeComponent();
         }
@@ -23,15 +23,6 @@ namespace MegaDesk_Mounteer
             MainMenu viewMainMenu = new MainMenu();
             viewMainMenu.Show();
             Close();
-        }
-
-        private void ViewQuoteButton_Click(object sender, EventArgs e)
-        {
-            // Navigate to the view quote menu
-            DisplayQuote viewQuote = new DisplayQuote();
-            viewQuote.Tag = this;
-            viewQuote.Show(this);
-            this.Hide();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace MegaDesk_Mounteer
 {
-    partial class AddQuote
+    partial class ViewAllQuotes
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.MainMenuButton = new System.Windows.Forms.Button();
-            this.ViewQuoteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // MainMenuButton
@@ -38,38 +37,23 @@
             this.MainMenuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MainMenuButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.MainMenuButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.MainMenuButton.Location = new System.Drawing.Point(31, 218);
+            this.MainMenuButton.Location = new System.Drawing.Point(29, 226);
             this.MainMenuButton.Name = "MainMenuButton";
             this.MainMenuButton.Size = new System.Drawing.Size(197, 60);
-            this.MainMenuButton.TabIndex = 4;
+            this.MainMenuButton.TabIndex = 5;
             this.MainMenuButton.Text = "&Main Menu";
             this.MainMenuButton.UseVisualStyleBackColor = false;
             this.MainMenuButton.Click += new System.EventHandler(this.MainMenuButton_Click);
             // 
-            // ViewQuoteButton
-            // 
-            this.ViewQuoteButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ViewQuoteButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ViewQuoteButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.ViewQuoteButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ViewQuoteButton.Location = new System.Drawing.Point(31, 152);
-            this.ViewQuoteButton.Name = "ViewQuoteButton";
-            this.ViewQuoteButton.Size = new System.Drawing.Size(197, 60);
-            this.ViewQuoteButton.TabIndex = 5;
-            this.ViewQuoteButton.Text = "&View Quote";
-            this.ViewQuoteButton.UseVisualStyleBackColor = false;
-            this.ViewQuoteButton.Click += new System.EventHandler(this.ViewQuoteButton_Click);
-            // 
-            // AddQuote
+            // ViewAllQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 311);
-            this.Controls.Add(this.ViewQuoteButton);
+            this.ClientSize = new System.Drawing.Size(565, 309);
             this.Controls.Add(this.MainMenuButton);
-            this.Name = "AddQuote";
+            this.Name = "ViewAllQuotes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Quote";
+            this.Text = "View All Quotes";
             this.ResumeLayout(false);
 
         }
@@ -77,6 +61,5 @@
         #endregion
 
         private Button MainMenuButton;
-        private Button ViewQuoteButton;
     }
 }

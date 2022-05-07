@@ -1,6 +1,6 @@
 ﻿namespace MegaDesk_Mounteer
 {
-    partial class AddQuote
+    partial class DisplayQuote
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.BackButton = new System.Windows.Forms.Button();
             this.MainMenuButton = new System.Windows.Forms.Button();
-            this.ViewQuoteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // BackButton
+            // 
+            this.BackButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.BackButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BackButton.Location = new System.Drawing.Point(28, 165);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(197, 60);
+            this.BackButton.TabIndex = 5;
+            this.BackButton.Text = "&Back";
+            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // MainMenuButton
             // 
@@ -38,45 +52,31 @@
             this.MainMenuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MainMenuButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.MainMenuButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.MainMenuButton.Location = new System.Drawing.Point(31, 218);
+            this.MainMenuButton.Location = new System.Drawing.Point(28, 231);
             this.MainMenuButton.Name = "MainMenuButton";
             this.MainMenuButton.Size = new System.Drawing.Size(197, 60);
-            this.MainMenuButton.TabIndex = 4;
+            this.MainMenuButton.TabIndex = 6;
             this.MainMenuButton.Text = "&Main Menu";
             this.MainMenuButton.UseVisualStyleBackColor = false;
             this.MainMenuButton.Click += new System.EventHandler(this.MainMenuButton_Click);
             // 
-            // ViewQuoteButton
-            // 
-            this.ViewQuoteButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ViewQuoteButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ViewQuoteButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.ViewQuoteButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ViewQuoteButton.Location = new System.Drawing.Point(31, 152);
-            this.ViewQuoteButton.Name = "ViewQuoteButton";
-            this.ViewQuoteButton.Size = new System.Drawing.Size(197, 60);
-            this.ViewQuoteButton.TabIndex = 5;
-            this.ViewQuoteButton.Text = "&View Quote";
-            this.ViewQuoteButton.UseVisualStyleBackColor = false;
-            this.ViewQuoteButton.Click += new System.EventHandler(this.ViewQuoteButton_Click);
-            // 
-            // AddQuote
+            // DisplayQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 311);
-            this.Controls.Add(this.ViewQuoteButton);
+            this.ClientSize = new System.Drawing.Size(565, 309);
             this.Controls.Add(this.MainMenuButton);
-            this.Name = "AddQuote";
+            this.Controls.Add(this.BackButton);
+            this.Name = "DisplayQuote";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Quote";
+            this.Text = "Display Quote";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private Button BackButton;
         private Button MainMenuButton;
-        private Button ViewQuoteButton;
     }
 }

@@ -25,5 +25,23 @@ namespace MegaDesk_Mounteer
             viewAddQuote.Show(this);
             this.Hide();
         }
+
+        private void ViewQuotesButton_Click(object sender, EventArgs e)
+        {
+            // Navigate to the view all quotes menu
+            ViewAllQuotes viewAllQuotes = new ViewAllQuotes();
+            viewAllQuotes.Tag = this;
+            viewAllQuotes.Show(this);
+            this.Hide();
+        }
+
+        private void SearchQuotesButton_Click(object sender, EventArgs e)
+        {
+            // Navigate to the search quotes menu
+            SearchQuote searchQuote = new SearchQuote();
+            searchQuote.Tag = this;
+            searchQuote.Show(this);
+            this.Hide();
+        }
     }
 }
