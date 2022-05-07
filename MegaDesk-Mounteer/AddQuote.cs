@@ -42,12 +42,24 @@ namespace MegaDesk_Mounteer
             {
                 this.errorProvider1.SetError(DeskDepthField, "Please enter a number between 12 and 48");
                 return;
-            } 
-        
-            // TODO pass data from one for to the other
+            }
+
+            // Create a desk object with the validated data
+            int deskWidth = Int32.Parse(DeskWidthField.Text);
+            int deskDepth = Int32.Parse(DeskDepthField.Text);
+            int deskNumOfDrawers = Int32.Parse(NumOfDrawersBox.Text);
+            Desk desk = new(deskWidth, deskDepth, deskNumOfDrawers, SurfaceMaterialBox.Text);
+
+            // Create a quote object
+            int rushDays = Int32.Parse(RushOrderBox.Text);
+            DeskQuote quote = new DeskQuote(CustomerNameField.Text, rushDays, desk);
+
+
+            // Make the calculations
+
 
             // Navigate to the view quote menu
-            DisplayQuote viewQuote = new DisplayQuote();
+            DisplayQuote viewQuote = new DisplayQuote(); // TODO pass our desk object and quote information into the constructor of the new window
             viewQuote.Tag = this;
             viewQuote.Show(this);
             this.Hide();

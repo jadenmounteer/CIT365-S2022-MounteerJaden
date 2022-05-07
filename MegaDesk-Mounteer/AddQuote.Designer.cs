@@ -189,6 +189,15 @@
             // NumOfDrawersBox
             // 
             this.NumOfDrawersBox.FormattingEnabled = true;
+            this.NumOfDrawersBox.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
             this.NumOfDrawersBox.Location = new System.Drawing.Point(199, 139);
             this.NumOfDrawersBox.Name = "NumOfDrawersBox";
             this.NumOfDrawersBox.Size = new System.Drawing.Size(121, 23);
@@ -197,6 +206,12 @@
             // SurfaceMaterialBox
             // 
             this.SurfaceMaterialBox.FormattingEnabled = true;
+            this.SurfaceMaterialBox.Items.AddRange(new object[] {
+            "laminate",
+            "oak",
+            "rosewood",
+            "veneer",
+            "pine"});
             this.SurfaceMaterialBox.Location = new System.Drawing.Point(246, 180);
             this.SurfaceMaterialBox.Name = "SurfaceMaterialBox";
             this.SurfaceMaterialBox.Size = new System.Drawing.Size(121, 23);
@@ -205,6 +220,11 @@
             // RushOrderBox
             // 
             this.RushOrderBox.FormattingEnabled = true;
+            this.RushOrderBox.Items.AddRange(new object[] {
+            "3",
+            "5",
+            "7",
+            "14"});
             this.RushOrderBox.Location = new System.Drawing.Point(210, 225);
             this.RushOrderBox.Name = "RushOrderBox";
             this.RushOrderBox.Size = new System.Drawing.Size(121, 23);

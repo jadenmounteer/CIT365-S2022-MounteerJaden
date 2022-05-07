@@ -19,14 +19,14 @@ namespace MegaDesk_Mounteer
     internal class Desk
     {
         // Fields
-        private double width;
-        private double depth;
+        private int width;
+        private int depth;
         private int numberOfDrawers;
-        private DesktopMaterial desktopMaterial;
+        public string DesktopMaterial;
 
         // Properties
-        public double Width { get { return width; } set { width = value; } }
-        public double Depth { get { return depth; } set { depth = value; } }
+        public int Width { get { return width; } set { width = value; } }
+        public int Depth { get { return depth; } set { depth = value; } }
         public int NumberOfDrawers { get { return numberOfDrawers; } set { numberOfDrawers = value; } }
 
         // Constraints
@@ -36,11 +36,17 @@ namespace MegaDesk_Mounteer
         const double MIN_DEPTH = 12;
 
         // Constructor
-        public Desk(double width, double depth, int numberOfDrawers) 
+        public Desk(int width, int depth, int numberOfDrawers, string desktopMaterial) 
         {
             this.Width = width;
             this.Depth = depth;
             this.NumberOfDrawers = numberOfDrawers;
+            this.DesktopMaterial = desktopMaterial;
+        }
+
+        public int GetSize()
+        {
+            return this.Width * this.Depth;
         }
 
     }
