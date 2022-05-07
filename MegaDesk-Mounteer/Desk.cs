@@ -16,7 +16,7 @@ namespace MegaDesk_Mounteer
         pine
     }
 
-    internal class Desk
+    public class Desk
     {
         // Fields
         private int width;

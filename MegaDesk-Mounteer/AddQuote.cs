@@ -54,12 +54,8 @@ namespace MegaDesk_Mounteer
             int rushDays = Int32.Parse(RushOrderBox.Text);
             DeskQuote quote = new DeskQuote(CustomerNameField.Text, rushDays, desk);
 
-
-            // Make the calculations
-
-
             // Navigate to the view quote menu
-            DisplayQuote viewQuote = new DisplayQuote(); // TODO pass our desk object and quote information into the constructor of the new window
+            DisplayQuote viewQuote = new DisplayQuote(desk, quote); // TODO pass our desk object and quote information into the constructor of the new window
             viewQuote.Tag = this;
             viewQuote.Show(this);
             this.Hide();

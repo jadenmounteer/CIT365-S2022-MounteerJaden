@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 namespace MegaDesk_Mounteer
 {
 
-    internal class DeskQuote
+    public class DeskQuote
     {
         // Fields
         private int rushDays;
         private string customerName;
         private string quoteDate;
+        public double BaseDeskPrice = 200;
 
         // Properties
         public Desk Desk;
@@ -118,7 +119,7 @@ namespace MegaDesk_Mounteer
             double surfaceMaterialsCost = this.CalculaeSurfaceMaterialsCost(desk);
             double drawersCost = this.CalculateDrawersCost(desk);
             double surfaceAreaCost = desk.GetSize();
-            return rushOrderCost + surfaceMaterialsCost + drawersCost + surfaceAreaCost;
+            return rushOrderCost + surfaceMaterialsCost + drawersCost + surfaceAreaCost + BaseDeskPrice;
         }
 
 
