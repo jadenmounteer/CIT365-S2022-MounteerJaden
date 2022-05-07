@@ -46,8 +46,9 @@
             this.AddNewQuoteButton.Name = "AddNewQuoteButton";
             this.AddNewQuoteButton.Size = new System.Drawing.Size(197, 60);
             this.AddNewQuoteButton.TabIndex = 0;
-            this.AddNewQuoteButton.Text = "Add New Quote";
+            this.AddNewQuoteButton.Text = "&Add New Quote";
             this.AddNewQuoteButton.UseVisualStyleBackColor = false;
+            this.AddNewQuoteButton.Click += new System.EventHandler(this.AddNewQuoteButton_Click);
             // 
             // ViewQuotesButton
             // 
@@ -59,7 +60,7 @@
             this.ViewQuotesButton.Name = "ViewQuotesButton";
             this.ViewQuotesButton.Size = new System.Drawing.Size(197, 60);
             this.ViewQuotesButton.TabIndex = 1;
-            this.ViewQuotesButton.Text = "View Quotes";
+            this.ViewQuotesButton.Text = "&View Quotes";
             this.ViewQuotesButton.UseVisualStyleBackColor = false;
             // 
             // SearchQuotesButton
@@ -72,7 +73,7 @@
             this.SearchQuotesButton.Name = "SearchQuotesButton";
             this.SearchQuotesButton.Size = new System.Drawing.Size(197, 60);
             this.SearchQuotesButton.TabIndex = 2;
-            this.SearchQuotesButton.Text = "Search Quotes";
+            this.SearchQuotesButton.Text = "&Search Quotes";
             this.SearchQuotesButton.UseVisualStyleBackColor = false;
             // 
             // ExitButton
@@ -85,8 +86,9 @@
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(197, 60);
             this.ExitButton.TabIndex = 3;
-            this.ExitButton.Text = "Exit";
+            this.ExitButton.Text = "&Exit";
             this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // button1
             // 
@@ -110,6 +112,7 @@
             this.Controls.Add(this.ViewQuotesButton);
             this.Controls.Add(this.AddNewQuoteButton);
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MegaDesk";
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
