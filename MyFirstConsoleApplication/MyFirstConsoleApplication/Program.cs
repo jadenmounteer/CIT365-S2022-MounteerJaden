@@ -7,15 +7,20 @@ namespace MyFirstConsoleApplication
         static void Main(string[] args)
         {
 
-            GetUserNameAndLocation();
+            var result = 3 / 6;
+            Console.WriteLine(result);
 
-            DateTime today = DateTime.Today;
-            ChristmasCountdown(today);
+            //GetUserNameAndLocation();
 
-            GlazerApp.RunExample();
+            //DateTime today = DateTime.Today;
+            //ChristmasCountdown(today);
 
-            Console.WriteLine("Press any key to close the program.");
-            Console.ReadKey();
+            //GlazerApp.RunExample();
+
+            //Console.WriteLine("Press any key to close the program.");
+            //Console.ReadKey();
+
+       
         }
 
         private static void GetUserNameAndLocation()
