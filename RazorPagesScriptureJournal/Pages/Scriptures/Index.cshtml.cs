@@ -22,20 +22,23 @@ namespace RazorPagesScriptureJournal.Pages.Scriptures
 
         public IList<Scripture> Scripture { get;set; }
         [BindProperty(SupportsGet = true)]
-        public string SearchString { get; set; }
-        public SelectList References { get; set; }
+        public string ReferenceSearch { get; set; }
         [BindProperty(SupportsGet = true)]
-        public string Reference { get; set; }
-
+        public string NoteSearch { get; set; }
 
         public async Task OnGetAsync()
         {
 
             var scriptures = from m in _context.Scripture
                          select m;
-            if (!string.IsNullOrEmpty(SearchString))
+            if (!string.IsNullOrEmpty(ReferenceSearch))
             {
-                scriptures = scriptures.Where(s => s.Reference.Contains(SearchString));
+                scriptures = scriptures.Where(s => s.Reference.Contains(ReferenceSearch));
+            }
+            else if (!string.IsNullOrEmpty(NoteSearch))
+            {
+                scriptures = scriptures.Where(s => s.Note.Contains(NoteSearch));
+
             }
 
             Scripture = await scriptures.ToListAsync();
