@@ -24,7 +24,9 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Scripture[0].Reference)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.ReferenceSort">
+                    @Html.DisplayNameFor(model => model.Scripture[0].Reference)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Scripture[0].Note)
