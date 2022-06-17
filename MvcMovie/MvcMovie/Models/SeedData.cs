@@ -27,7 +27,8 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("1989-2-12"),
                         Genre = "Historical",
                         Price = 7.99M,
-                        Rating = "PG"
+                        Rating = "PG",
+                        ImageName = "ephraims rescue.jpg"
                     },
 
                     new Movie
@@ -36,7 +37,9 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("1984-3-13"),
                         Genre = "Historical",
                         Price = 8.99M,
-                        Rating = "PG"
+                        Rating = "PG",
+                        ImageName = "17 miracles.jpg"
+
                     },
 
                     new Movie
@@ -45,16 +48,8 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("1986-2-23"),
                         Genre = "Historical",
                         Price = 9.99M,
-                        Rating = "PG"
-                    },
-
-                    new Movie
-                    {
-                        Title = "The Other Side of Heaven",
-                        ReleaseDate = DateTime.Parse("1959-4-15"),
-                        Genre = "Entertainment",
-                        Price = 3.99M,
-                        Rating = "PG"
+                        Rating = "PG",
+                        ImageName = "Joseph smith.jpg"
                     }
                 );
                 context.SaveChanges();
