@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -30,5 +31,14 @@ namespace MvcMovie.Models
         [StringLength(5)]
         [Required]
         public string? Rating { get; set; }
+
+        [Column(TypeName = "nvarchar(100)")]        
+        public string? ImageName { get; set; }
+
+        [NotMapped]
+        [DisplayName("Upload File")]
+        public IFormFile? ImageFile { get; set; }
+
+
     }
 }
