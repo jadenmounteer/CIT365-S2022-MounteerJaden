@@ -225,6 +225,14 @@ namespace MvcMovie.Controllers
             var movie = await _context.Movie.FindAsync(id);
             if (movie != null)
             {
+
+                // Delete the image file
+                var imagePath = Path.Combine(_hostEnvironment.WebRootPath,"Images",movie.ImageName);
+
+                if (System.IO.File.Exists(imagePath))
+                {
+                    System.IO.File.Delete(imagePath);
+                }
                 _context.Movie.Remove(movie);
             }
             
