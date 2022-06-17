@@ -29,8 +29,11 @@
             </div>
             <div class="form-group">
                 <label asp-for="Genre" class="control-label"></label>
-                <input asp-for="Genre" class="form-control" />
-                <span asp-validation-for="Genre" class="text-danger"></span>
+                <select asp-for="Genre" class="form-control">
+                    <option value="Historical">Historical</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Spiritual">Spiritual</option>
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="Price" class="control-label"></label>
